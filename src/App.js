@@ -21,7 +21,7 @@ class App extends React.Component {
       return {
         ...prevState,
         password: e.target.value,
-        isPasswordValid: e.target.value.length > 5 /* ? true : false, */
+        isPasswordValid: e.target.value.length > 5  
       };
     });
   }
