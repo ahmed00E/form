@@ -21,7 +21,7 @@ class App extends React.Component {
       return {
         ...prevState,
         password: e.target.value,
-        isPasswordValid: e.target.value.length > 5  
+        isPasswordValid: e.target.value.length > 5
       };
     });
   }
@@ -37,7 +37,7 @@ onEmailChange = (e) => {
 };
 
 handleSubmit = (e) => {
-  e.prevState();
+  e.preventDefault();
 
   if (this.state.isEmailValid && this.state.isPasswordValid) {
     this.setState((prevState) => {
@@ -78,7 +78,7 @@ handleSubmit = (e) => {
             />
           </div>
 
-          <div className="my-3 form-check">
+          <div className="my-4 form-check">
             <input 
               type="checkbox" 
               className="form-check-input" 
@@ -98,6 +98,7 @@ handleSubmit = (e) => {
 
 
   render() {
+    console.log("state   => ", this.state.isFormSubmit);
     return(
       <div className="container"> 
       <h2>Login</h2>
